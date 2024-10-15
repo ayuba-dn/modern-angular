@@ -88,7 +88,7 @@ module.exports = tseslint.config(
             { from: "feature", allow: ["core", "ui"] },
             { from: "pattern", allow: ["core", "ui"] },
             { from: "core", allow: ["core", "ui"] },
-            { from: "ui", allow: ["ui"] },
+            { from: "ui", allow: ["ui", "core"] },
             { from: "main", allow: ["app"] },
             { from: "layout", allow: ["feature"] },
             { from: "app", allow: ["app", "layout"] },

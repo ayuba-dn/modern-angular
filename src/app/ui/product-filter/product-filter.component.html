@@ -1,0 +1,46 @@
+<form [formGroup]="filterForm" class="flex space-x-4 mb-6">
+  <!-- Product Dropdown -->
+  <div class="w-1/4">
+    <label for="product" class="block text-sm font-medium text-gray-700"
+      >Select Product</label
+    >
+    <select
+      formControlName="productName"
+      class="w-full input-field mt-1 block py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+    >
+      <option value="all">All products</option>
+      <option value="maize">Maize</option>
+      <option value="rice">Rice</option>
+      <option value="wheat">Wheat</option>
+      <option value="cassava">Cassava</option>
+    </select>
+  </div>
+
+  <!-- Location Dropdown -->
+  <div class="w-1/4">
+    <label for="location" class="block text-sm font-medium text-gray-700"
+      >Select Location</label
+    >
+    <select
+      formControlName="location"
+      class="w-full input-field mt-1 block py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+    >
+      <option value="lagos">Lagos</option>
+      <option value="abuja">Abuja</option>
+      <option value="kano">Kano</option>
+      <option value="port-harcourt">Port Harcourt</option>
+    </select>
+  </div>
+
+  <!-- Datepicker with calendar popup -->
+  <div class="w-1/4">
+    <label for="report-date" class="block text-sm font-medium text-gray-700"
+      >Select Date</label
+    >
+    <input
+      formControlName="date"
+      type="date"
+      class="w-full input-field mt-1 block py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+    />
+  </div>
+</form>

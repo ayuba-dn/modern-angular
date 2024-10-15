@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ProductPrice } from '../../core/models/product-price.model';
 import { CommonModule } from '@angular/common';
+import { ProductFilterComponent } from '../../ui/product-filter/product-filter.component';
+import { ProductFilter } from '../../core/models/product-filter.model';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ProductFilterComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
@@ -54,4 +56,8 @@ export class DashboardComponent {
       addedBy: 'Adeola Ayeni',
     },
   ];
+
+  getProductPrices(filter: ProductFilter) {
+    console.log(filter);
+  }
 }

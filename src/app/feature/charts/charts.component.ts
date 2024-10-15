@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ChartOptions } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
+import { ProductFilterComponent } from '../../ui/product-filter/product-filter.component';
 
 @Component({
   selector: 'app-charts',
   standalone: true,
-  imports: [BaseChartDirective],
+  imports: [BaseChartDirective, ProductFilterComponent],
   templateUrl: './charts.component.html',
   styleUrl: './charts.component.css',
 })
