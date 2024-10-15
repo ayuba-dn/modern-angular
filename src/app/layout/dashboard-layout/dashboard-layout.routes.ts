@@ -14,6 +14,13 @@ export const dashboardRoutes: Routes = [
           ),
       },
       {
+        path: 'charts',
+        loadComponent: () =>
+          import('./../../feature/charts/charts.component').then(
+            (m) => m.ChartsComponent,
+          ),
+      },
+      {
         path: 'add-product',
         loadComponent: () =>
           import('../../feature/add-product/add-product.component').then(

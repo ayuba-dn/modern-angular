@@ -52,53 +52,32 @@
     </div>
   </div>
 
-  <div class="w-full mt-12">
-    <p class="text-xl pb-3 flex items-center">
-      <i class="fas fa-list mr-3"></i> Product Prices
-    </p>
-    <div class="bg-white overflow-auto">
-      <table class="min-w-full bg-white">
-        <thead class="bg-gray-800 text-white">
-          <tr>
-            <th
-              class="w-1/4 text-left py-2 px-2 uppercase font-semibold text-sm"
-            >
-              Product
-            </th>
-            <th
-              class="w-1/4 text-left py-2 px-2 uppercase font-semibold text-sm"
-            >
-              Size
-            </th>
-            <th
-              class="w-1/4 text-left py-2 px-2 uppercase font-semibold text-sm"
-            >
-              Price (NGN)
-            </th>
-            <th
-              class="w-1/4 text-left py-2 px-2 uppercase font-semibold text-sm"
-            >
-              Added By
-            </th>
-          </tr>
-        </thead>
-        <tbody class="text-gray-700">
-          @for (product of productPrices; track product.id) {
-            <tr>
-              <td class="w-1/4 text-left py-2 px-2">{{ product.name }}</td>
-              <td class="w-1/4 text-left py-2 px-2">{{ product.size }}</td>
-              <td class="w-1/4 text-left py-2 px-2">
-                {{ product.price | number }}
-              </td>
-              <td class="w-1/4 text-left py-2 px-2">
-                <a class="hover:text-blue-500" href="tel:622322662">{{
-                  product.addedBy
-                }}</a>
-              </td>
-            </tr>
-          }
-        </tbody>
-      </table>
+  <div class="flex flex-wrap mt-6">
+    <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
+      <p class="text-xl pb-3 flex items-center">
+        <i class="fas fa-plus mr-3"></i> Monthly Reports
+      </p>
+      <div class="p-6 bg-white">
+        <canvas
+          baseChart
+          [data]="barChartData"
+          [type]="'bar'"
+          [options]="chartOptions"
+        ></canvas>
+      </div>
+    </div>
+    <div class="w-full lg:w-1/2 pl-0 lg:pl-2 mt-12 lg:mt-0">
+      <p class="text-xl pb-3 flex items-center">
+        <i class="fas fa-check mr-3"></i> Resolved Reports
+      </p>
+      <div class="p-6 bg-white">
+        <canvas
+          baseChart
+          [data]="lineChartData"
+          [type]="'line'"
+          [options]="chartOptions"
+        ></canvas>
+      </div>
     </div>
   </div>
 </div>
