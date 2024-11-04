@@ -60,6 +60,10 @@ module.exports = tseslint.config(
           type: "env",
           pattern: "src/environments/*",
         },
+        {
+          type: "interceptors",
+          pattern: "src/app/interceptors/*",
+        },
       ],
     },
     rules: {
@@ -91,7 +95,8 @@ module.exports = tseslint.config(
             { from: "ui", allow: ["ui", "core"] },
             { from: "main", allow: ["app"] },
             { from: "layout", allow: ["feature"] },
-            { from: "app", allow: ["app", "layout"] },
+            { from: "app", allow: ["app", "layout", "interceptors"] },
+            { from: "interceptors", allow: ["core"] },
           ],
         },
       ],
